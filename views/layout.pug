@@ -1,0 +1,30 @@
+doctype html
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{title} | House Of Tech
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    header    
+      .container
+        .logo
+          h1
+            a(href="/") House Of Tech
+        nav
+          ul
+            li
+              a(href="/" class=currentPath === '/' ? 'active' : '') Accueil
+            li
+              a(href="/services" class=currentPath === '/services' ? 'active' : '') Nos Services
+            li
+              a(href="/contact" class=currentPath === '/contact' ? 'active' : '') Nous Contacter
+
+    main
+      .container
+        block content
+
+    footer
+      .container
+        p &copy; #{new Date().getFullYear()} House Of Tech. Tous droits réservés.
+        p Heures d'ouverture : Lundi au Vendredi, de 9h à 17h 

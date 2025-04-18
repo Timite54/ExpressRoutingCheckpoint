@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  section.page-header
+    h2 Nous Contacter
+    p N'hésitez pas à nous contacter pour toute question ou demande d'information.
+
+  section.contact-container
+    .contact-info
+      h3 Nos coordonnées
+      .info-item
+        .info-icon 📍
+        div
+          h4 Adresse
+          p
+            | Treichville, Avenue 21
+            br
+            | Abidjan, Côte d'Ivoire
+      
+      .info-item
+        .info-icon 📞
+        div
+          h4 Téléphone
+          p +225 05 54 58 40 55
+      
+      .info-item
+        .info-icon ✉️
+        div
+          h4 Email
+          p namory.timite@uvci.edu.ci
+      
+      .info-item
+        .info-icon 🕒
+        div
+          h4 Heures d'ouverture
+          p
+            | Lundi - Vendredi: 9h - 17h
+            br
+            | Fermé les weekends et jours fériés
+    
+    .contact-form
+      h3 Formulaire de contact
+      form
+        .form-group
+          label(for="name") Nom complet
+          input(type="text" id="name" name="name" required)
+        
+        .form-group
+          label(for="email") Email
+          input(type="email" id="email" name="email" required)
+        
+        .form-group
+          label(for="subject") Sujet
+          input(type="text" id="subject" name="subject" required)
+        
+        .form-group
+          label(for="message") Message
+          textarea(id="message" name="message" rows="5" required)
+        
+        button.btn(type="submit") Envoyer 
